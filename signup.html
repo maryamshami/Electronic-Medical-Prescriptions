@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Electronic Medical Prescriptions</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- SECTION_1 INFO -->
+  <section id="s1" class="clearfix">  
+      <header class="header">
+        <a href="#s1" style="font-size:30px;">Electronic Medical Prescriptions</a>
+      </header>
+    
+      <article class="clearfix">
+          <br><br><br>
+        <h2>find<br> your<br> Medical Prescriptions</h2>
+      </article>
+  
+    <!-- IPAD AND IPHONE VIEW: NAV INFO-->
+    <nav id="iphonenav" class="overlay1">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <div class="overlay-content">
+        <a href="./index.html">HOME</a>
+  
+  
+        <a href="contact.html">CONTACT</a>
+        <a href="./login.html">Login</a>
+        <a href="./signup.html">Register</a>
+  
+      </div>
+    </nav>
+    <span id="trigger" onclick="openNav()">☰</span>
+  <!--  DESKTOP VIEW: NAV INFO -->
+    <nav id="nav">
+      <a href="./index.html">HOME</a>
+    
+      <a href="contact.html">CONTACT</a>
+      <a href="./login.html">Login</a>
+        <a href="./signup.html">Register</a>
+    </nav>
+  
+  </section>
+  <section style="margin-left: 10%; margin-top: 10%;">
+
+    <div id="reg" style="margin-left: 1%;">
+      <strong style="color:#b3b7a9; "><h1> signup</h1></strong>
+      <div  style="font-size:20px; margin-left:25px; margin-top:55px; padding-right : 10%; padding-left: 7%;">
+        <form name="signup" action="signup.php" method="post" >
+
+       
+             Identification Number <input type="text" name="identification_number" id="identification_number" 
+             style="background-color: rgb(195, 231, 38) ;">
+             <br>
+
+             Email <input type="text" name="email" id="email" style="background-color: rgb(195, 231, 38) ;">
+            Password 
+                  <br>
+              <input type="password" name="password" id="pd" width="1000" style="background-color: rgb(195, 231, 38) ; width: 100%;">
+              <br>
+            full name 
+              <br>
+          <input type="text" name="name" id="name" style="background-color: rgb(195, 231, 38) ; width: 100%;">
+          <br>
+          Adress
+          <br>
+      <input type="text" name="address"  style="background-color: rgb(195, 231, 38) ; width: 100%;">
+      <br>
+      Phone number
+            <br>
+        <input type="tel" name="tele"  style="background-color: rgb(195, 231, 38) ; width: 100%;">
+        <br>
+        Age 
+        <br>
+        <input type="number" id="age" name="age" min="0" max="120" required>
+        <br>
+        <label for="user_type">User Type:</label>
+        <select id="user_type" name="user_type" required>
+          <option value="">Select User Type</option>
+          <option value="patient">Patient</option>
+          <option value="doctor">Doctor</option>
+          <option value="pharmacist">Pharmacist</option>
+        </select>
+        <br>
+             <input type="submit" id="signup-btn" value="Submit" onclick="validateForm();" style="margin-left: 20%; ">
+            </form>
+      </div>
+
+  </section>
+
+<!-- FOOTER INFO -->
+<footer>
+    <div id="footer">
+      <div class="logo"><h1>Electronic Medical Prescriptions</h1></div>
+  
+      <div class="info1">
+        <a href="mailto:team@gmail.COM">team@gmail.COM</a><br>
+        <span id="contact">
+        <a href="#">FACEBOOK</a> |
+        <a href="#">INSTAGRAM</a> |
+        <a href="#">PINTEREST</a> 
+        </span>
+      </div>
+  
+    </div>
+  </footer>
+
+
+
+  <!-- JAVASCRIPT INFO -->
+
+  <script>
+  function openNav() {
+    document.getElementById("iphonenav").style.width="200px";
+  }
+
+  function closeNav() {
+    document.getElementById("iphonenav").style.width="0px";
+  }
+
+</script>
+
+  </script>
+
+</body>
+<script>
+const form = document.querySelector('form');
+const signupBtn = document.getElementById('signup-btn');
+
+signupBtn.addEventListener('click', function(event) {
+  event.preventDefault();
+  
+  const nameInput = document.getElementById('name');
+  const emailInput = document.getElementById('email');
+  const identification_number = document.getElementById('identification_number');
+  const password = document.getElementById('pd');
+
+
+  if (!nameInput.value) {
+    alert('Please enter full Name.');
+  }  else if (!emailInput.value) {
+    alert('Please enter Email.');
+  }else if (!identification_number.value) {
+    alert('Please enter identification_number.');
+  } else if (!password.value) {
+    alert('Please enter password.');
+  }else {
+    form.submit();
+  }
+});
+</script>
+</html>

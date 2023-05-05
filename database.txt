@@ -1,0 +1,35 @@
+CREATE DATABASE medical;
+use medical;
+CREATE TABLE patients (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  identification_number VARCHAR(20) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  address VARCHAR(50) NOT NULL,
+  tele VARCHAR(20) NOT NULL,
+  age INT(3) NOT NULL
+);
+
+CREATE TABLE doctors (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  identification_number VARCHAR(20) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  address VARCHAR(50) NOT NULL,
+  tele VARCHAR(20) NOT NULL,
+  age INT(3) NOT NULL
+);
+
+CREATE TABLE pharmacists (
+  id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  identification_number VARCHAR(20) NOT NULL,
+  email VARCHAR(50) NOT NULL,
+  password VARCHAR(50) NOT NULL,
+  name VARCHAR(50) NOT NULL,
+  address VARCHAR(50) NOT NULL,
+  tele VARCHAR(20) NOT NULL,
+  age INT(3) NOT NULL
+);
+
